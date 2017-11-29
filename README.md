@@ -6,7 +6,7 @@ Cerebro project: [https://github.com/lmenezes/cerebro](https://github.com/lmenez
 
 This Docker image is built and available in Docker hub [unidario/cerebro:latest](https://hub.docker.com/r/unidario/cerebro/)
 
-# Docker Tags
+## Docker Tags
 
 `unidario/cerebro` provides only one cerebro version at the moment:
 
