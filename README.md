@@ -39,5 +39,5 @@ Then you can access the web console in this URL: [http://$DOCKERHOST:9000](http:
 
 ## Disclaimer
 
-This repository is build using the code of [yannert/cerebro](https://github.com/yannart/docker-cerebro).
-It was created because [yannert/cerebro](https://github.com/yannart/docker-cerebro) does not seem to be maintained anymore and there was a need to have Elasticsearch 6.0.0 support.
+This repository is build using the code of [yannert/docker-cerebro](https://github.com/yannart/docker-cerebro).
+It was created because [yannert/docker-cerebro](https://github.com/yannart/docker-cerebro) does not seem to be maintained anymore and there was a need to have Elasticsearch 6.0.0 support.
