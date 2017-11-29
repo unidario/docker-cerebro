@@ -1,0 +1,61 @@
+version: '2'
+services:
+
+  cerebro:
+    build: .
+
+    # Instead of building the image locally, you can use:
+    # image: unidario/cerebro:latest
+    ports:
+      - "9000:9000"
+    networks:
+      - es_net
+
+  # Elasticsearch cluster
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.0.0
+    environment:
+      cluster.name: "es-cluster"
+      node.name: "es1"
+      bootstrap.memory_lock: "true"
+      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      xpack.security.enabled: "false"
+      xpack.monitoring.enabled: "false"
+      xpack.graph.enabled: "false"
+      xpack.watcher.enabled: "false"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    mem_limit: 1g
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    networks:
+      - es_net
+
+  elasticsearch2:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.0.0
+    environment:
+      cluster.name: "es-cluster"
+      node.name: "es2"
+      bootstrap.memory_lock: "true"
+      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      xpack.security.enabled: "false"
+      xpack.monitoring.enabled: "false"
+      xpack.graph.enabled: "false"
+      xpack.watcher.enabled: "false"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    mem_limit: 1g
+    ports:
+      - "9201:9200"
+      - "9301:9300"
+    networks:
+      - es_net
+
+networks:
+  es_net:
+    driver: bridge
