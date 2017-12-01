@@ -12,6 +12,7 @@ This Docker image is built and available in Docker hub [unidario/cerebro:latest]
 
 - `latest` (default): Latest version of Cerebro.
 - `0.7.2`: Cerebro 0.7.2 (Elasticsearch 6.0.0 supported)
+- `0.7.2-alpine`: Cerebro 0.7.2 based on [Alpine Linux](http://alpinelinux.org/) and much smaller (Elasticsearch 6.0.0 supported)
 
 ## Usage
 
